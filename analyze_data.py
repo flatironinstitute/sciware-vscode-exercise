@@ -1,17 +1,28 @@
+'''
+analyze_data.py
+
+Loads (x,y) data points from a given file, fits a line, and plots the results.
+'''
+
 import sys
 
+import numpy as np
+import numpy.typing as npt
 
-def load_data(fn):
+def load_data(fn: str) -> npt.NDArray[np.float64]:
     print(f'Loading data from {fn}...')
-    pass
+
+    data = np.loadtxt(fn)
+    return data
 
 
-def fit_line(data):
-    print(f'Saving data points to {fn}...')
+def fit_line(data) -> Tuple[float,float]:
+    print('Fitting line...')
     pass
 
 
 def plot(data, slope, intercept):
+    print('Plotting fit...')
     pass
 
 

@@ -1,14 +1,48 @@
+'''
+generate_data.py
+
+Generates N (x,y) data points that follow a line, with Gaussian noise.
+The data points are written to a CSV file.
+'''
+
 import sys
 
+import numpy as np
+import numpy.typing as npt
 
-def gen_data(N: int):
+
+def gen_data(N: int,
+             slope: float = 2.0,
+             intercept: float = 1.0,
+             sigma: float = 0.1,
+             ) -> npt.NDArray[np.float64]:
     print(f'Generating {N} data points...')
-    pass
+
+    data = np.empty((2,N))
+
+    ### YOUR CODE HERE ###
+    ### Generate N linearly spaced data points between 0 and 1 using Numpy
+    # X = ???
+
+    rng = np.random.default_rng()
+    ### YOUR CODE HERE ###
+    ### Generate normally-distributed noise with a mean of using the Numpy `rng` object
+    # sigma = ???
+
+    Y = slope*X + intercept + sigma
+
+    data = np.vstack((X,Y))
+    return data
 
 
-def save_data(data, fn):
+def save_data(data: npt.NDArray[np.float64],
+              fn: str,
+              ):
     print(f'Saving data points to {fn}...')
-    pass
+
+    ### YOUR CODE HERE ###
+    ### Save the `data` array as a text file using Numpy's `np.savetxt()`
+    # np.savetxt(???)
 
 
 def main(N: int):
