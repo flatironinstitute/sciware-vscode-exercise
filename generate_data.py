@@ -51,11 +51,11 @@ def main(N: int):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 2:
+    if len(sys.argv) == 2:
+        N = int(sys.argv[1])
+    elif len(sys.argv) == 1:
+        N = 100
+    else:
         print('Usage: python generate_data.py [N]')
         sys.exit(1)
-    if len(sys.argv) > 1:
-        N = int(sys.argv[1])
-    else:
-        N = 100
     main(N)
