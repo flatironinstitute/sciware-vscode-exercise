@@ -18,15 +18,13 @@ def gen_data(N: int,
              ) -> npt.NDArray[np.float64]:
     print(f'Generating {N} data points...')
 
-    data = np.empty((2,N))
-
     ### YOUR CODE HERE ###
-    ### Generate N linearly spaced data points between 0 and 1 using Numpy
+    ### Generate N linearly spaced data points between 0 and 1 using np.linspace()
     # X = ???
 
     rng = np.random.default_rng()
     ### YOUR CODE HERE ###
-    ### Generate normally-distributed noise with a mean of using the Numpy `rng` object
+    ### Generate normally-distributed noise with a mean of using rng.normal()
     # sigma = ???
 
     Y = slope*X + intercept + sigma
@@ -46,8 +44,8 @@ def save_data(data: npt.NDArray[np.float64],
 
 
 def main(N: int):
-    data = gen_data(N)
-    save_data(data, 'data.csv')
+    # data = gen_data(N)
+    # save_data(data, 'data.csv')
 
 
 if __name__ == '__main__':

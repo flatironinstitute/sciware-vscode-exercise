@@ -27,9 +27,9 @@ def plot(data, slope, intercept):
 
 
 def main(fn: str):
-    data = load_data(fn)
-    line = fit_line(data)
-    plot(data, line)
+    # data = load_data(fn)
+    # line = fit_line(data)
+    # plot(data, line)
 
 
 if __name__ == '__main__':
