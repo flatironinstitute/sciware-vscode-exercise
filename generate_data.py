@@ -24,17 +24,18 @@ def gen_data(N: int,
 
     rng = np.random.default_rng()
     ### YOUR CODE HERE ###
-    ### Generate normally-distributed noise with a mean of using rng.normal()
-    # sigma = ???
+    ### Generate normally-distributed noise using rng.normal()
+    ### Should have a mean of 0 and a standard deviation of `sigma`
+    # noise = ???
 
-    Y = slope*X + intercept + sigma
+    Y = slope*X + intercept + noise
 
     data = np.vstack((X,Y))
     return data
 
 
 def save_data(data: npt.NDArray[np.float64],
-              fn: str,
+              fn: str = 'data.txt',
               ):
     print(f'Saving data points to {fn}...')
 
@@ -44,8 +45,9 @@ def save_data(data: npt.NDArray[np.float64],
 
 
 def main(N: int):
-    # data = gen_data(N)
-    # save_data(data, 'data.csv')
+    ### YOUR CODE HERE ###
+    ### Call the gen_data() and save_data() functions to generate and write the data
+    pass
 
 
 if __name__ == '__main__':
